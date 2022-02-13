@@ -1,251 +1,265 @@
-.header{
-    background: #9accfd8a;
-    padding: 1%;
-    width: 98%;
-    color: #fff;
-    font-size: 33px;
-    font-style: inherit;
+.header {
+  background: #9accfd8a;
+  padding: 1%;
+  width: 98%;
+  color: #fff;
+  font-size: 33px;
+  font-style: inherit;
 
-    overflow: hidden;
+  overflow: hidden;
   /* background-color: #333; */
   position: fixed;
   top: 0;
   width: 100%;
 }
 .main {
-    padding: 16px;
-    margin-top: 30px;
-  }
-.logo{
-    width: 10%;
+  padding: 16px;
+  margin-top: 30px;
 }
-.row{
-    width: 100%;
+.logo {
+  width: 10%;
 }
-.col-20{
-    width: 20%;
+.row {
+  width: 100%;
 }
-.col-60{
-    width: 60%;
-
+.col-20 {
+  width: 20%;
 }
-.Home{
-    width: 24%;
-    margin: 4%;
-    display: flex;
+.col-60 {
+  width: 60%;
 }
-.right{
-    border-right: 2px solid grey;
+.Home {
+  width: 24%;
+  margin: 4%;
+  display: flex;
 }
-.left{
-    border-left: 2px solid grey;
-
+.right {
+  border-right: 2px solid grey;
 }
-.layout{
-    height: 520px;
-    overflow-y: hidden;
-    position: unset !important;
-    margin-top: 6%;
+.left {
+  border-left: 2px solid grey;
 }
-.post-content{
-    border: 2px solid;
-    /* padding: 8%; */
-    width: 96%;
-    margin-left: 2% !important;
-    margin-top: 2% !important;
-    box-shadow: 1px 2px 8px 5px #333333;
-
+.layout {
+  height: 520px;
+  overflow-y: hidden;
+  position: unset !important;
+  margin-top: 6%;
 }
-.layout-newsfeed{
-    height: auto;
-    overflow-y: hidden;
-    position: unset !important;
-    margin-top: 6%;
-
+.post-content {
+  border: 2px solid #c8e3fe;
+  /* padding: 8%; */
+  width: 96%;
+  margin-left: 2% !important;
+  margin-top: 2% !important;
+  /* box-shadow: 1px 2px 8px 5px #333333; */
+  box-shadow: 1px 2px 8px 5px #c8e3fe;
 }
-.post-box{
-    margin-top: 2%;
-    margin-left: 12%;
-    width: 75%;
-    height: auto;
-    background: #fff;
-    box-shadow: 1px 2px 8px 5px #333333;
-    border-radius: 25px
+.layout-newsfeed {
+  height: auto;
+  overflow-y: hidden;
+  position: unset !important;
+  margin-top: 6%;
 }
-.indi-post{
-    margin-left: 2%;
-    font-weight: bolder;
-    width: 100%;
+.post-box {
+  margin-top: 2%;
+  margin-left: 12%;
+  width: 75%;
+  height: auto;
+  background: #fff;
+  box-shadow: 1px 2px 8px 5px #c8e3fe;
+  margin-bottom: 2%;
+  /* border-radius: 25px; */
 }
-.posted-image{
-    width: 70%;
-    margin-left: 12%;
-    height: 270px;
-    margin-bottom: 2%;
+.indi-post {
+  margin-left: 2%;
+  font-weight: bolder;
+  width: 100%;
 }
-.news-profile-name{
-    margin-top: 4%;
+.posted-image {
+  width: 70%;
+  margin-left: 12%;
+  height: 270px;
+  margin-bottom: 2%;
 }
-.dp-img{
-  
-    margin: 3%;
-    width: 45px;
-    border-radius: 45%;
-    border: 2px solid black;
-
+.news-profile-name {
+  margin-top: 4%;
 }
-.fa-pen-to-square{
-    content: 'f044';
+.dp-img {
+  margin: 3%;
+  width: 45px;
+  border-radius: 45%;
+  border: 2px solid black;
+}
+.fa-pen-to-square {
+  content: 'f044';
 }
 
-.text-box{
-    height: 40px;
-    width: 55%;
-    margin-top: 3%;
-    border-radius: 20px;
-    border: 2px solid black;
-
+.text-box {
+  height: 40px;
+  width: 55%;
+  margin-top: 3%;
+  border-radius: 20px;
+  border: 2px solid black;
 }
 
-.Text-box-post{
-width: 70%;
-margin-left: 10%;
-margin-bottom: 2%;
-border-radius: 12px;
+.Text-box-post {
+  width: 70%;
+  margin-left: 10%;
+  margin-bottom: 2%;
+  border-radius: 12px;
 }
-.Write-post{
-    /* border: 2px solid; */
-    width: 85%;
-    margin-left: 8% !important;
-    margin-bottom: 2% !important;
-    box-shadow: 0 0.3rem 1rem rgb(4 4 4);
-    border-radius: 25px;
-
+.Write-post {
+  /* border: 2px solid; */
+  width: 85%;
+  margin-left: 8% !important;
+  margin-bottom: 2% !important;
+  box-shadow: 1px 2px 8px 5px #c8e3fe;
+  border-radius: 25px;
 }
 
 .posted-image:active {
-    transform: scale(1.2);
-  }
+  transform: scale(1.2);
+}
 
-  /* .modalClass {  
+/* .modalClass {  
     text-align: center;  
     margin-top: 100px;  
   }   */
-  .App {
-    font-family: sans-serif;
-    text-align: center;
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.mymodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+.post-btn {
+  margin-left: 86%;
+  margin-bottom: 4%;
+}
+.post-success {
+  font-size: 25px;
+  font-family: sans-serif;
+  margin-left: 40%;
+}
+.post-btn-btn {
+  color: #fff;
+  background: #1877f2;
+  font-size: 21px;
+  border-radius: 4px;
+  /* margin: -3%; */
+  border: 1px;
+}
+.myoverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+body {
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  background-color: #f5f8fa;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+header p {
+  margin: 0 0 8px 0;
+}
+
+.searchboxWrapper {
+  background-color: #fff;
+  border-radius: 0.3rem;
+  border: 1px solid #ddd;
+  display: inline-block;
+
+  margin-left: 35%;
+
+  padding: 15px;
+  box-shadow: 0 0.3rem 1rem rgba(8, 38, 78, 0.2);
+}
+
+a {
+  color: #1584b5;
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+footer img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  margin-right: 5px;
+}
+
+footer span {
+  vertical-align: middle;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 700px) {
+  .logo {
+    width: 70%;
   }
-  .App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  
-  .mymodal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-    border: 1px solid #ccc;
+  .post-box {
+    margin-top: 19%;
+    margin-left: 1%;
+    width: 102%;
+    height: auto;
     background: #fff;
-    overflow: auto;
-    border-radius: 4px;
-    outline: none;
-    padding: 20px;
+    box-shadow: 1px 2px 8px 5px #c8e3fe;
+    border-radius: 25px;
   }
-  .post-btn{
-    margin-left: 86%;
-    margin-bottom: 4%;
-  }
-  .post-success{
-    font-size: 25px;
-    font-family: sans-serif;
-    margin-left: 40%;
-  }
-  .post-btn-btn{
-    color: #fff;
-    background: #1877f2;
-    font-size: 21px;
-    border-radius: 4px;
-    /* margin: -3%; */
-    border: 1px;
-  }
-  .myoverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-  
-  .ReactModal__Overlay {
-    opacity: 0;
-    transition: opacity 500ms ease-in-out;
-  }
-  
-  .ReactModal__Overlay--after-open {
-    opacity: 1;
-  }
-  
-  .ReactModal__Overlay--before-close {
-    opacity: 0;
-  }
-  
-
-
-
-  body {
-    text-align: center;
-    padding-top: 10px;
-    font-family: "Lato", sans-serif;
-    font-size: 14px;
-    background-color: #f5f8fa;
-  }
-  
-  header {
-    margin-bottom: 25px;
-  }
-  
-  header p {
-    margin: 0 0 8px 0;
-  }
-  
   .searchboxWrapper {
-    background-color: #fff;
-    border-radius: 0.3rem;
-    border: 1px solid #ddd;
-    display: inline-block;
-    padding: 15px;
-    box-shadow: 0 0.3rem 1rem rgba(8, 38, 78, 0.2);
+    margin-left: 20%;
   }
-  
-  a {
-    color: #1584b5;
+  .Home {
+    width: 17%;
+    margin: 4%;
   }
-  
-  footer {
-    margin-top: 30px;
-    margin-bottom: 40px;
-  }
-  
-  footer img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 19px;
-    margin-right: 5px;
-  }
-  
-  footer span {
-    vertical-align: middle;
-  }
-  
-  footer a {
-    color: #aaa;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
+}

@@ -6,13 +6,13 @@ import './asset.css'
 import Home from '../styles/house-chimney-solid.svg'
 import pen from '../styles/pen.svg'
 import Gif from '../styles/gificons.png'
+import video from '../styles/video-solid.svg'
 import { Description } from '@material-ui/icons'
 import ReactGiphySearchbox from 'react-giphy-searchbox'
-
 var data = [
   {
     id: 1,
-    name: 'Hariprasad',
+    name: 'User1',
     Description:
       "Hey, this is a story I hate And telling it might make me break But I'll tell it anyway This chapter's about How yousaid there was nobody else Then you got up and went to her house You guys always left me out",
     link:
@@ -20,14 +20,14 @@ var data = [
   },
   {
     id: 1,
-    name: 'Harry',
+    name: 'User2',
     Description:
       'Look deep into nature, and then you will understand everything better.',
     link: 'https://media2.giphy.com/media/Z21HJj2kz9uBG/giphy.gif',
   },
   {
     id: 3,
-    name: 'Harry61298',
+    name: 'User3',
     Description:
       'We don’t inherit the earth from our ancestors, we borrow it from our children',
     link:
@@ -79,7 +79,7 @@ export default class NewsFeed extends Component {
 
     var Posts = {
       id: data.length + 1,
-      name: 'Hariprasad',
+      name: 'User ' + Number(data.length + 1),
       Description: this.state.Text,
       link: url,
     }
@@ -132,6 +132,11 @@ export default class NewsFeed extends Component {
                     type="text"
                     placeholder="Whats on your mind"
                     readOnly
+                    onClick={(e) =>
+                      openGif
+                        ? this.OpenGifRow('close')
+                        : this.OpenGifRow('open')
+                    }
                   />
                   <div
                     className="Home"
@@ -142,7 +147,7 @@ export default class NewsFeed extends Component {
                     }
                   >
                     <img style={{ width: '30px' }} src={pen} alt="Home" />{' '}
-                    {openGif ? (
+                    {/* {openGif ? (
                       <span style={{ marginLeft: '1em', fontWeight: 'bolder' }}>
                         Close post{' '}
                       </span>
@@ -150,36 +155,46 @@ export default class NewsFeed extends Component {
                       <span style={{ marginLeft: '1em', fontWeight: 'bolder' }}>
                         Compose post{' '}
                       </span>
-                    )}
+                    )} */}
                   </div>
                   {openGif ? (
                     <div className="row Write-post">
                       {openGif ? (
-                        <div className="row" style={{ margin: '3% 2% 3% 4%' }}>
-                          <textarea
-                            type="text"
-                            className="Text-box-post"
-                            placeholder="Write about something"
-                            onChange={this.TextBox}
-                          />
-                          <img
-                            style={{ width: '50px', marginLeft: '6%' }}
-                            src={Gif}
-                            alt="Gif"
-                            onClick={(e) =>
-                              showGif
-                                ? this.OpenGif('close')
-                                : this.OpenGif('open')
-                            }
-                          />{' '}
+                        <div style={{ width: '100%' }}>
+                          <div
+                            className="row"
+                            style={{ margin: '3% 2% 3% 4%' }}
+                          >
+                            <textarea
+                              type="text"
+                              className="Text-box-post"
+                              placeholder="Write about something"
+                              onChange={this.TextBox}
+                            />
+                            <div>
+                              <img
+                                style={{ width: '50px', marginLeft: '6%' }}
+                                src={Gif}
+                                alt="Gif"
+                                onClick={(e) =>
+                                  showGif
+                                    ? this.OpenGif('close')
+                                    : this.OpenGif('open')
+                                }
+                              />{' '}
+                            </div>
+                          </div>
                         </div>
                       ) : (
                         ''
                       )}
+                      {/* <div style={{ margin: ' 0% 0% 2% 14%' }}> */}
+
+                      {/* </div> */}
                       {showGif ? (
                         <div className="searchboxWrapper">
                           <ReactGiphySearchbox
-                            apiKey="9Ixlv3DWC1biJRI57RanyL7RTbfzz0o7"
+                            apiKey="nKxTkKCzfhqQd7wXdWSoTsQp6bpcyxbT"
                             poweredByGiphy={false}
                             onSelect={(item) =>
                               this.setState({
