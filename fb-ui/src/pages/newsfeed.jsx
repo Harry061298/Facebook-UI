@@ -221,7 +221,7 @@ export default class NewsFeed extends Component {
                           <div>
                             <img
                               className="posted-image"
-                              style={{ width: 'auto' }}
+                              // style={{ width: 'auto' }}
                               src={url}
                             />
                           </div>
