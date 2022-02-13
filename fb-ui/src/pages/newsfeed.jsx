@@ -16,22 +16,21 @@ var data = [
     Description:
       "Hey, this is a story I hate And telling it might make me break But I'll tell it anyway This chapter's about How yousaid there was nobody else Then you got up and went to her house You guys always left me out",
     link:
-      'https://gallery.yopriceville.com/var/albums/Animated-Gif-Images/Beautiful_Tree_Gif_Animation.gif?m=1399676400',
+      'https://institute.careerguide.com/wp-content/uploads/2020/09/BelovedMagnificentKatydid-max-1mb.gif',
   },
   {
     id: 1,
     name: 'User2',
     Description:
       'Look deep into nature, and then you will understand everything better.',
-    link: 'https://media2.giphy.com/media/Z21HJj2kz9uBG/giphy.gif',
+    link: 'https://i.gifer.com/L61C.gif',
   },
   {
     id: 3,
     name: 'User3',
     Description:
       'We don’t inherit the earth from our ancestors, we borrow it from our children',
-    link:
-      'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif',
+    link: 'https://acegif.com/wp-content/gif/outerspace-22.gif',
   },
 ]
 export default class NewsFeed extends Component {
