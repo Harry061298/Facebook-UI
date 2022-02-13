@@ -30,7 +30,9 @@
 
 }
 .Home{
-    width: 30px;
+    width: 24%;
+    margin: 4%;
+    display: flex;
 }
 .right{
     border-right: 2px solid grey;
@@ -92,13 +94,32 @@
     border: 2px solid black;
 
 }
+.fa-pen-to-square{
+    content: 'f044';
+}
 
 .text-box{
     height: 40px;
-    width: 60%;
+    width: 55%;
     margin-top: 3%;
     border-radius: 20px;
     border: 2px solid black;
+
+}
+
+.Text-box-post{
+width: 70%;
+margin-left: 10%;
+margin-bottom: 2%;
+border-radius: 12px;
+}
+.Write-post{
+    /* border: 2px solid; */
+    width: 85%;
+    margin-left: 8% !important;
+    margin-bottom: 2% !important;
+    box-shadow: 0 0.3rem 1rem rgb(4 4 4);
+    border-radius: 25px;
 
 }
 
@@ -106,3 +127,125 @@
     transform: scale(1.2);
   }
 
+  /* .modalClass {  
+    text-align: center;  
+    margin-top: 100px;  
+  }   */
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .mymodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+  }
+  .post-btn{
+    margin-left: 86%;
+    margin-bottom: 4%;
+  }
+  .post-success{
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-left: 40%;
+  }
+  .post-btn-btn{
+    color: #fff;
+    background: #1877f2;
+    font-size: 21px;
+    border-radius: 4px;
+    /* margin: -3%; */
+    border: 1px;
+  }
+  .myoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+  
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+  
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+  
+
+
+
+  body {
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    background-color: #f5f8fa;
+  }
+  
+  header {
+    margin-bottom: 25px;
+  }
+  
+  header p {
+    margin: 0 0 8px 0;
+  }
+  
+  .searchboxWrapper {
+    background-color: #fff;
+    border-radius: 0.3rem;
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 15px;
+    box-shadow: 0 0.3rem 1rem rgba(8, 38, 78, 0.2);
+  }
+  
+  a {
+    color: #1584b5;
+  }
+  
+  footer {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  
+  footer img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 19px;
+    margin-right: 5px;
+  }
+  
+  footer span {
+    vertical-align: middle;
+  }
+  
+  footer a {
+    color: #aaa;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  

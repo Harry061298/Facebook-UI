@@ -4,37 +4,105 @@ import './styles.css'
 import './asset.css'
 
 import Home from '../styles/house-chimney-solid.svg'
+import pen from '../styles/pen.svg'
+import Gif from '../styles/gificons.png'
 import { Description } from '@material-ui/icons'
+import ReactGiphySearchbox from 'react-giphy-searchbox'
 
+var data = [
+  {
+    id: 1,
+    name: 'Hariprasad',
+    Description:
+      "Hey, this is a story I hate And telling it might make me break But I'll tell it anyway This chapter's about How yousaid there was nobody else Then you got up and went to her house You guys always left me out",
+    link:
+      'https://gallery.yopriceville.com/var/albums/Animated-Gif-Images/Beautiful_Tree_Gif_Animation.gif?m=1399676400',
+  },
+  {
+    id: 1,
+    name: 'Harry',
+    Description:
+      'Look deep into nature, and then you will understand everything better.',
+    link: 'https://media2.giphy.com/media/Z21HJj2kz9uBG/giphy.gif',
+  },
+  {
+    id: 3,
+    name: 'Harry61298',
+    Description:
+      'We don’t inherit the earth from our ancestors, we borrow it from our children',
+    link:
+      'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif',
+  },
+]
 export default class NewsFeed extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showGif: false,
+      openGif: false,
+      selectedGif: '',
+      text: '',
+      url: '',
+      Posts: [],
+      PostSuccess: false,
+    }
+  }
+
+  componentDidMount = () => {
+    // this.state.Posts.push(data)
+    // console.log('data', this.state.Posts)
+  }
+  OpenGifRow = (type) => {
+    if (type == 'open') {
+      this.setState({ openGif: true })
+    } else {
+      this.setState({ openGif: false })
+    }
+  }
+  OpenGif = (type) => {
+    if (type == 'open') {
+      this.setState({ showGif: true })
+    } else {
+      this.setState({ showGif: false })
+    }
+  }
+  TextBox = (e) => {
+    this.setState({ Text: e.target.value })
+  }
+
+  postButton = () => {
+    var data1 = data.length
+    var data2 = this.state.Posts.length
+    console.log('Postcheck', data1, data2)
+    var url =
+      'https://media2.giphy.com/media/' + this.state.selectedGif + '/giphy.gif'
+
+    var Posts = {
+      id: data.length + 1,
+      name: 'Hariprasad',
+      Description: this.state.Text,
+      link: url,
+    }
+
+    data.push(Posts)
+
+    data.sort((a, b) => parseFloat(b.id) - parseFloat(a.id))
+
+    this.setState({
+      Posts: data,
+      PostSuccess: true,
+      openGif: false,
+      selectedGif: '',
+    })
+    setTimeout(() => {
+      this.setState({ PostSuccess: false })
+    }, 5000)
+  }
   render() {
-    var data = [
-      {
-        id: 1,
-        name: 'Hariprasad',
-        Description:
-          "Hey, this is a story I hate And telling it might make me break But I'll tell it anyway This chapter's about How yousaid there was nobody else Then you got up and went to her house You guys always left me out",
-        link:
-          'https://gallery.yopriceville.com/var/albums/Animated-Gif-Images/Beautiful_Tree_Gif_Animation.gif?m=1399676400',
-      },
-      {
-        id: 3,
-        name: 'Harry',
-        Description:
-          'Look deep into nature, and then you will understand everything better.',
-        link:
-          'https://media.wired.com/photos/59326d5344db296121d6aee9/master/pass/8552.gif',
-      },
-      {
-        id: 2,
-        name: 'Harry61298',
-        Description:
-          'We don’t inherit the earth from our ancestors, we borrow it from our children',
-        link:
-          'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif',
-      },
-    ]
-    console.log('data', data)
+    const { openGif, showGif, selectedGif, PostSuccess } = this.state
+    var url = 'https://media2.giphy.com/media/' + selectedGif + '/giphy.gif'
+
+    // this.setState({ url: url })
     return (
       <div>
         <div className="header">
@@ -43,28 +111,15 @@ export default class NewsFeed extends Component {
             src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
             alt="fb"
           />
-          {/* <div>
-            {' '}
-            <FontAwesomeIcon icon="fa-light fa-house-chimney" />
-            <img className="Home" src={Home} alt="Home" />
-          </div> */}
         </div>
 
         <div className="">
           <div className="row">
-            <div className="col-md-2 ">
-              {/* <li>Friends</li>
-              <li>Friends</li>
-              <li>Friends</li>
-              <li>Friends</li>
-              <li>Friends</li>
-              <li>Friends</li>
-              <li>Friends</li> */}
-            </div>
+            <div className="col-md-2 "></div>
             <div className="col-md-8 layout-newsfeed">
               <div className="post-box">
                 <div
-                  className="row"
+                  className="row "
                   style={{ borderBottom: '2px solid', marginLeft: '0%' }}
                 >
                   <img
@@ -78,6 +133,104 @@ export default class NewsFeed extends Component {
                     placeholder="Whats on your mind"
                     readOnly
                   />
+                  <div
+                    className="Home"
+                    onClick={(e) =>
+                      openGif
+                        ? this.OpenGifRow('close')
+                        : this.OpenGifRow('open')
+                    }
+                  >
+                    <img style={{ width: '30px' }} src={pen} alt="Home" />{' '}
+                    {openGif ? (
+                      <span style={{ marginLeft: '1em', fontWeight: 'bolder' }}>
+                        Close post{' '}
+                      </span>
+                    ) : (
+                      <span style={{ marginLeft: '1em', fontWeight: 'bolder' }}>
+                        Compose post{' '}
+                      </span>
+                    )}
+                  </div>
+                  {openGif ? (
+                    <div className="row Write-post">
+                      {openGif ? (
+                        <div className="row" style={{ margin: '3% 2% 3% 4%' }}>
+                          <textarea
+                            type="text"
+                            className="Text-box-post"
+                            placeholder="Write about something"
+                            onChange={this.TextBox}
+                          />
+                          <img
+                            style={{ width: '50px', marginLeft: '6%' }}
+                            src={Gif}
+                            alt="Gif"
+                            onClick={(e) =>
+                              showGif
+                                ? this.OpenGif('close')
+                                : this.OpenGif('open')
+                            }
+                          />{' '}
+                        </div>
+                      ) : (
+                        ''
+                      )}
+                      {showGif ? (
+                        <div className="searchboxWrapper">
+                          <ReactGiphySearchbox
+                            apiKey="9Ixlv3DWC1biJRI57RanyL7RTbfzz0o7"
+                            poweredByGiphy={false}
+                            onSelect={(item) =>
+                              this.setState({
+                                selectedGif: item.id,
+                                showGif: false,
+                              })
+                            }
+                            masonryConfig={[
+                              { columns: 2, imageWidth: 110, gutter: 5 },
+                              {
+                                mq: '700px',
+                                columns: 3,
+                                imageWidth: 120,
+                                gutter: 5,
+                              },
+                            ]}
+                          />
+                        </div>
+                      ) : (
+                        ''
+                      )}
+                      {selectedGif != '' ? (
+                        <div className="row">
+                          <div>
+                            <img
+                              className="posted-image"
+                              style={{ width: 'auto' }}
+                              src={url}
+                            />
+                          </div>
+                          <div className="post-btn">
+                            <button
+                              class="button post-btn-btn"
+                              onClick={this.postButton}
+                            >
+                              Post
+                            </button>
+                          </div>
+                        </div>
+                      ) : (
+                        ''
+                      )}
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                  {PostSuccess ? (
+                    <div className="post-success">Posted</div>
+                  ) : (
+                    ''
+                  )}
                 </div>
 
                 {data
