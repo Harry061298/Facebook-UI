@@ -14,7 +14,7 @@ var data = [
     id: 1,
     name: 'User1',
     Description:
-      "Hey, this is a story I hate And telling it might make me break But I'll tell it anyway This chapter's about How yousaid there was nobody else Then you got up and went to her house You guys always left me out",
+      "Hey, this  is a story I hate And telling it might make me break But I'll tell it anyway This chapter's about How yousaid there was nobody else Then you got up and went to her house You guys always left me out",
     link:
       'https://institute.careerguide.com/wp-content/uploads/2020/09/BelovedMagnificentKatydid-max-1mb.gif',
   },
