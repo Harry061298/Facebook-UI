@@ -70,6 +70,8 @@ export default class NewsFeed extends Component {
   }
 
   postButton = () => {
+
+    
     var data1 = data.length
     var data2 = this.state.Posts.length
     console.log('Postcheck', data1, data2)
